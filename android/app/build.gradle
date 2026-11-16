@@ -9,7 +9,7 @@ def flutterVersionName = '1.0.0'
 
 android {
     namespace "com.inventoryjira.app"
-    compileSdk 35
+    compileSdk 34
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -24,7 +24,7 @@ android {
     defaultConfig {
         applicationId "com.inventoryjira.app"
         minSdk 21
-        targetSdk 35
+        targetSdk 34
         versionCode flutterVersionCode
         versionName flutterVersionName
     }
