@@ -1,0 +1,57 @@
+name: inventory_jira
+description: >-
+  Мобильное приложение инвентаризации для ТСД Android (Urovo DT50 и аналоги).
+  Прямая интеграция с Jira Assets и Jira Service Management по REST API,
+  локальная БД Drift/SQLite, офлайн-очередь синхронизации, печать этикеток
+  TSC TE210 по TSPL.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.19.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Состояние приложения
+  flutter_riverpod: ^2.6.1
+
+  # Локальная БД (Drift / SQLite) — автономность ТСД, сессия на несколько дней
+  drift: ^2.16.0
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.5
+  path: ^1.9.0
+
+  # HTTP-клиент для Jira REST API
+  dio: ^5.7.0
+
+  # Камера (запасной сканер для обычных смартфонов)
+  mobile_scanner: ^6.0.0
+
+  # Фотофиксация дефектов
+  image_picker: ^1.1.2
+
+  # Сеть и батарея (сервисная панель)
+  connectivity_plus: ^6.1.0
+  battery_plus: ^6.0.0
+
+  # Звуковой и вибро-отклик оператора
+  vibration: ^2.1.0
+  audioplayers: ^6.1.0
+
+  # Форматирование дат
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.13
+  drift_dev: ^2.16.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/
